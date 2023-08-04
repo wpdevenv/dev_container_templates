@@ -39,21 +39,9 @@ By default, web frameworks and tools often only listen to localhost inside the c
 
 The `ports` property in `docker-compose.yml` [publishes](https://docs.docker.com/config/containers/container-networking/#published-ports) rather than forwards the port. This will not work in a cloud environment like Codespaces and applications need to listen to `*` or `0.0.0.0` for the application to be accessible externally. Fortunately the `forwardPorts` property does not have this limitation.
 
-### Starting / stopping Apache
+### Apache
 
-This dev container includes Apache in addition to the PHP CLI. While you can use PHP's built in CLI (e.g. `php -S 0.0.0.0:8080`), you can start Apache by running:
-
-```bash
-apache2ctl start
-```
-
-Apache will be available on port `8080`.
-
-If you want to wire in something directly from your source code into the `www` folder, you can add a symlink as follows to `postCreateCommand`:
-
-```json
-"postCreateCommand": "sudo chmod a+x \"$(pwd)\" && sudo rm -rf /var/www/html && sudo ln -s \"$(pwd)\" /var/www/html"
-```
+This dev container includes Apache in addition to the PHP.
 
 ...or execute this from a terminal window once the container is up:
 
