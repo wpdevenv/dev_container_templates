@@ -1,24 +1,15 @@
-This template references an image that was [pre-built](https://containers.dev/implementors/reference/#prebuilding) to automatically include needed devcontainer.json metadata.
+This template references an image that was [pre-built](https://containers.dev/implementors/reference/#prebuilding) to automatically include needed devcontainer.json metadata
 
 * **Image**: mcr.microsoft.com/devcontainers/php ([source](https://github.com/devcontainers/images/tree/main/src/php))
 * **Applies devcontainer.json contents from image**: Yes ([source](https://github.com/devcontainers/images/blob/main/src/php/.devcontainer/devcontainer.json))
 
 ## Using this template
 
-This template creates two containers, one for PHP and one for MariaDB. You will be connected to the PHP container, and from within that container the MariabDB container will be available on **`localhost`** port 3305. The MariaDB database has a default password of `mariadb` and you can update MariaDB parameters by updating the `.devcontainer/docker-compose.yml` file.
+This template creates two containers, one for PHP and one for MySQL. You will be connected to the PHP container. The MySQL database has a default password of `wordpress` and you can update MySQL parameters by updating the `.devcontainer/docker-compose.yml` file.
 
-While the template itself works unmodified, it uses the `mcr.microsoft.com/devcontainers/php` image which includes `git`, a non-root `vscode` user with `sudo` access, and a set of common dependencies and Python tools for development.
+The template uses the `wpdevenv/php` image which includes `git`. This template add a non-root `vscode` user with `sudo` access.
 
-You can connect to MariaDB from an external tool when connected to the Dev Container from a local tool by updating `.devcontainer/devcontainer.json` as follows:
-
-```json
-"forwardPorts": [ "3306" ]
-```
-
-Once the MariaDB container has port forwarding enabled, it will be accessible from the Host machine at `localhost:3306`. The [MariaDB Documentation](https://mariadb.com/docs/) has:
-
-1. [An Installation Guide for MySQL](https://mariadb.com/kb/en/mysql-client/), a CLI tool to work with a MariaDB database.
-2. [Tips on populating data](https://mariadb.com/kb/en/how-to-quickly-insert-data-into-mariadb/) in the database. 
+You can connect to MySQL from an external tool, it will be accessible from the Host machine at `localhost:9030`
 
 ### Adding another service
 
