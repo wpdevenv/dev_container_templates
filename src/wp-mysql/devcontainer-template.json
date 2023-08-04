@@ -1,0 +1,40 @@
+{
+    "id": "wp-mysql",
+    "version": "0.1.0",
+    "name": "WP & MySQL",
+    "description": "Develop WP applications with MySQL.",
+    "documentationURL": "https://github.com/devcontainers/templates/tree/main/src/php-mariadb",
+    "publisher": "Wpdevenv",
+    "licenseURL": "https://github.com/devcontainers/templates/blob/main/LICENSE",
+    "options": {
+        "phpVersion": {
+            "type": "string",
+            "description": "PHP version:",
+            "proposals": [
+                "7.4"
+            ],
+            "default": "7.4"
+        },
+        "wpVersion": {
+            "type": "string",
+            "description": "WP version:",
+            "proposals": [
+                "6.0"
+            ],
+            "default": "6.0"
+        },
+        "contentPath": {
+            "type": "string",
+            "description": "Content path:",
+            "proposals": [
+                "plugins",
+                "themes"
+            ],
+            "default": "themes"
+        }
+    },
+    "platforms": [
+        "PHP",
+        "MySQL"
+    ]
+}
