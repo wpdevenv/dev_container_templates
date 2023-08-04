@@ -45,7 +45,8 @@ ARG WP_PATH
 RUN groupadd --gid $USER_GID vscode \
 	&& useradd -s /bin/bash --uid $USER_UID --gid $USER_GID -m vscode \
 	&& usermod -a -G www-data vscode \
-	&& usermod -a -G sudo vscode
+	&& usermod -a -G sudo vscode \
+	&& echo "vscode ALL=(ALL) NOPASSWD: ALL" > /etc/sudoers.d/vscode
 
 RUN ln -s /workspace/release $WP_PATH
 
