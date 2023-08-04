@@ -3,7 +3,7 @@ cd $(dirname "$0")
 source test-utils.sh
 
 # Template specific tests
-check "wp" cat /var/www/html/wp-config.php | grep SCRIPT_DEBUG
+check "wp" grep -wq "SCRIPT_DEBUG" /var/www/html/wp-config.php
 
 # Report result
 reportResults
