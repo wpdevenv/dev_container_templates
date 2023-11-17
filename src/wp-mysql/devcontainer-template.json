@@ -3,9 +3,9 @@
     "version": "0.1.0",
     "name": "WP & MySQL",
     "description": "Develop WP applications with MySQL.",
-    "documentationURL": "https://github.com/devcontainers/templates/tree/main/src/php-mariadb",
+    "documentationURL": "https://github.com/wpdevenv/dev_container_templates/tree/main/src/wp-mysql",
     "publisher": "Wpdevenv",
-    "licenseURL": "https://github.com/devcontainers/templates/blob/main/LICENSE",
+    "licenseURL": "https://github.com/wpdevenv/dev_container_templates/blob/main/LICENCE",
     "options": {
         "phpVersion": {
             "type": "string",
