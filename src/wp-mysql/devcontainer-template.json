@@ -1,6 +1,6 @@
 {
     "id": "wp-mysql",
-    "version": "0.1.0",
+    "version": "0.1.1",
     "name": "WP & MySQL",
     "description": "Develop WP applications with MySQL.",
     "documentationURL": "https://github.com/wpdevenv/dev_container_templates/tree/main/src/wp-mysql",
